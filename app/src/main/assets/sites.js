@@ -3,12 +3,12 @@
    (kosongkan dengan "" jika mau pakai tampilan default)
    ======================================================= */
 
-window.LOGO_URL = "https://i.ibb.co/Y446WRjk/nabung77-LOGO-APK.jpg";
-window.BG_URL   = "https://i.ibb.co/Txx3QDGR/background-apk-nabung.jpg";
-window.APP_NAME = "NABUNG77";
+window.LOGO_URL = "https://i.ibb.co/zhTJSd6S/LOGO-APK-SETOR.jpg";
+window.BG_URL   = "https://i.ibb.co/XZtw9FXr/Background-setor123-Apk.jpg";
+window.APP_NAME = "SETOR123";
 
 /* Link Box Event & Pesan (live dari panel admin Worker) */
-window.INFO_URL = "https://playgame-notif.b2444014.workers.dev/info";
+window.INFO_URL = "https://setor123-notif.adeliaputri151995.workers.dev/info";
 
 
 /* =======================================================
@@ -22,17 +22,17 @@ window.INFO_URL = "https://playgame-notif.b2444014.workers.dev/info";
 
 window.SITES = [
   {
-    name: "NABUNG77",
+    name: "SETOR123",
     category: "SLOT",
-    image: "https://i.ibb.co/Y446WRjk/nabung77-LOGO-APK.jpg",
-    url: "https://cutt.ly/nabung77seobambu",
+    image: "https://i.ibb.co/zhTJSd6S/LOGO-APK-SETOR.jpg",
+    url: "https://cutt.ly/SETOR123VIP",
     premium: true
   },
   {
     name: "GARASIPOKER",
     category: "PKV",
-    image: "https://i.ibb.co/gMdz90LD/logo-garasi-poker-di-dalam.jpg",
-    url: "https://cutt.ly/garasipoker-login"
+    image: "https://i.ibb.co/G4SDXqCy/LOGO-MAMIQQ.jpg",
+    url: "https://cutt.ly/HokiPokerMamiQQ"
   }
   // Tambahkan game lain di sini, pisahkan dengan koma ( , )
 ];
