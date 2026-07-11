@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "1076613776345",
-    "project_id": "playgame-notif",
-    "storage_bucket": "playgame-notif.firebasestorage.app"
+    "project_number": "714453169991",
+    "project_id": "setor123-app",
+    "storage_bucket": "setor123-app.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1076613776345:android:f15d92f80b05860a89cfc8",
+        "mobilesdk_app_id": "1:714453169991:android:bf1aeae62df55fef5a7e62",
         "android_client_info": {
-          "package_name": "com.simple.webapp"
+          "package_name": "com.setor123.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBFxhWdZ1ULqJbbKvA5rmo7xHaUSjTMvd4"
+          "current_key": "AIzaSyCpZ1ZsxjhQ8XM9JZgKUS_j1H2tSF8JXWk"
         }
       ],
       "services": {
