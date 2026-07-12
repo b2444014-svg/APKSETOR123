@@ -29,7 +29,7 @@ window.SITES = [
     premium: true
   },
   {
-    name: "GARASIPOKER",
+    name: "MAMIQQ",
     category: "PKV",
     image: "https://i.ibb.co/G4SDXqCy/LOGO-MAMIQQ.jpg",
     url: "https://cutt.ly/HokiPokerMamiQQ"
