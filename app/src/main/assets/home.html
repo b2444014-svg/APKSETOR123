@@ -46,13 +46,13 @@
   .btns{display:flex;flex-direction:column;gap:16px}
   /* tombol: bingkai dengan cahaya emas berjalan + wajah dark elegan */
   .btn{position:relative;width:100%;border-radius:34px;padding:2.5px;cursor:pointer;overflow:hidden;
-    background:#1c1a14;box-shadow:0 9px 24px rgba(0,0,0,.5);
+    background:var(--fbg,#1c1a14);box-shadow:0 9px 24px rgba(0,0,0,.5);
     transition:transform .12s ease}
   .btn::before{content:"";position:absolute;z-index:0;top:50%;left:50%;width:700px;height:700px;
     transform:translate(-50%,-50%);
     background:conic-gradient(from 0deg,
       rgba(255,200,60,0) 0deg, rgba(255,200,60,0) 215deg,
-      #f5c542 290deg, #fff4c2 330deg, #f5c542 360deg);
+      var(--f1,#f5c542) 290deg, var(--f2,#fff4c2) 330deg, var(--f1,#f5c542) 360deg);
     animation:spin 3.2s linear infinite}
   .btn:active{transform:scale(.975)}
   .face{position:relative;z-index:1;display:flex;align-items:center;gap:14px;width:100%;height:64px;
@@ -61,12 +61,12 @@
     background:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,0));border-radius:32px 32px 50% 50%/32px 32px 24px 24px}
   @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
   .btn .ic{position:relative;z-index:1;width:42px;height:42px;flex:none;border-radius:50%;
-    background:rgba(255,255,255,.12);border:2px solid rgba(245,197,66,.55);
+    background:rgba(255,255,255,.12);border:2px solid var(--fic,rgba(245,197,66,.55));
     background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;
     font-size:18px;font-weight:800;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
   .btn .nm{position:relative;z-index:1;flex:1;text-align:center;line-height:1.15;
     text-shadow:0 1px 4px rgba(0,0,0,.6)}
-  .btn .arr{position:relative;z-index:1;flex:none;font-size:22px;color:#f5c542;opacity:.95;
+  .btn .arr{position:relative;z-index:1;flex:none;font-size:22px;color:var(--farr,#f5c542);opacity:.95;
     text-shadow:0 1px 3px rgba(0,0,0,.5)}
 
 
@@ -146,6 +146,20 @@
     return '<div class="ic">'+ch+'</div>';
   }
 
+  /* warna khusus per nama tombol (selain ini pakai warna default emas) */
+  function themeFor(name){
+    var n = (name||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+    if(n.indexOf('SETOR123')>=0){
+      return { body:['#22c55e','#15803d'],
+        vars:'--f1:#ffffff;--f2:#ffffff;--fbg:#d1d5db;--fic:rgba(255,255,255,.75);--farr:#ffffff' };
+    }
+    if(n.indexOf('MAMIQQ')>=0){
+      return { body:['#22c55e','#04120a'],
+        vars:'--f1:#8a8a8a;--f2:#1a1a1a;--fbg:#0a0a0a;--fic:rgba(255,255,255,.25);--farr:#e5e7eb' };
+    }
+    return null;
+  }
+
   function render(){
     var box=document.getElementById('btns');
     if(!SITES.length){
@@ -153,9 +167,11 @@
       return;
     }
     box.innerHTML = SITES.map(function(s,i){
-      var col = COLORS[i % COLORS.length];
+      var t = themeFor(s.name);
+      var col = t ? t.body : COLORS[i % COLORS.length];
       var grad = 'background:linear-gradient(180deg,'+col[0]+','+col[1]+')';
-      return '<div class="btn" onclick="openSite(SITES['+i+'])">'+
+      var btnStyle = t ? (' style="'+t.vars+'"') : '';
+      return '<div class="btn"'+btnStyle+' onclick="openSite(SITES['+i+'])">'+
         '<div class="face" style="'+grad+'">'+
           iconHTML(s)+
           '<div class="nm">'+esc(s.name)+'</div>'+
