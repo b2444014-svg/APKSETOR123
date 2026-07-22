@@ -28,12 +28,6 @@ window.SITES = [
     url: "https://cutt.ly/SETOR123VIP",
     premium: true
   },
-  {
-    name: "MAMIQQ",
-    category: "PKV",
-    image: "https://i.ibb.co/G4SDXqCy/LOGO-MAMIQQ.jpg",
-    url: "https://cutt.ly/HokiPokerMamiQQ"
-  }
   // Tambahkan game lain di sini, pisahkan dengan koma ( , )
 ];
 
